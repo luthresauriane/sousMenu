@@ -1,0 +1,46 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background: salmon;
+    margin-bottom: 18px;
+}
+/* les pseudos classes */
+/* :active permet un changement lorsque l'on maintient un click sur l'element */
+.box:active{
+    background: blueviolet;
+}
+/* ::first-letter designe la premiere lettre */
+h1::first-letter{
+    color: orange;
+}
+input:focus{
+    background: blueviolet;
+    outline: none;
+    border: 1px solid blueviolet;
+}
+/* :checked pour le checkimg de l'input et ne fonctionne que avec la checkbox */
+input:checked{
+    width: 20px;
+    height: 20px;
+    accent-color: black;
+}
+a{
+    text-decoration: none;
+}
+/* quand un lien a deja ete visité */
+a:visited{
+    color: orange;
+}
+/* nth-child permet de selectionner un enfant
+odd selectionne les impairs et even selectionne les pairs */
+li:nth-child(odd){
+    color: red;
+}
+/* ::first-line pour la selection de la premiere ligne */
+p::first-line{
+    color: blueviolet;
+}
+/* ::selection pour la selection d'un texte avec la souris */
+p::selection{
+    background: orange;
+}
