@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sous-menu</title>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li class="has-sous-nav"><a href="#">About</a>
+                <ul class="sous-nav">
+                    <li><a href="#">Sous_1</a></li>
+                    <li><a href="#">Sous_2</a></li>
+                    <li><a href="#">Sous_3</a></li>
+                </ul>
+            </li>
+            <li class="has-sous-nav"><a href="#">Home</a>
+                <ul class="sous-nav">
+                    <li><a href="#">Sous_4</a></li>
+                    <li><a href="#">Sous_5</a></li>
+                    <li><a href="#">Sous_6</a></li>
+                </ul>
+            </li>
+            <li class="has-sous-nav">
+                <a href="#">Contact</a>
+                <ul class="sous-nav">
+                    <li><a href="#">Sous_7</a></li>
+                    <li><a href="#">Sous_8</a></li>
+                    <li><a href="#">Sous_9</a></li>
+                </ul>
+            </li>
+            <li class="has-sous-nav"><a href="#">Services</a>
+                <ul class="sous-nav">
+                    <li><a href="#">Sous_10</a></li>
+                    <li><a href="#">Sous_11</a></li>
+                    <li><a href="#">Sous_12</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="test">
+        <header>Au passge de la souris sur un lien du menu, le menu s'affiche</header>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            height: 100vh;
+        }
+        .menu{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background: brown;
+        }
+        .menu > ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu > ul a{
+            color: black;
+            padding: 20px;
+            font-size: 22px;
+        }
+        .test{
+            background-color: black;
+            height: 500px;
+            color: aliceblue;
+            padding: 10px 20px;
+            font-size: 45px;
+            font-weight: 600;
+        }
+        .sous-nav{
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: white;
+            width: max-content;
+        }
+        .sous-nav li a{
+            padding: 1px;
+            z-index: 1;
+        }
+        .sous-nav li a:hover{
+            background-color: blueviolet;
+            
+        }
+        .has-sous-nav{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            z-index: 10;
+        }
+        .has-sous-nav > .sous-nav{
+            margin-top: 20px;
+        }
+        .has-sous-nav:hover > .sous-nav{
+            display: block;
+
+        }
+    </style>
+</body>
+</html>
